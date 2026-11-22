@@ -285,9 +285,9 @@ public class TestBasicDataSourceFactory {
                 assertEquals(warningCount, messages.stream().filter(message -> message.startsWith("Name = jdbc/test Property ")).count());
                 assertEquals(infoCount, messages.stream().filter(message -> message.startsWith("Name = jdbc/test Ignoring unknown property: ")).count());
                 if (warningCount != 0) {
-                    assertTrue(messages.get(0).contains("Property maxActive "), messages.toString());
-                    assertTrue(messages.get(1).contains("Property removeAbandoned "), messages.toString());
-                    assertTrue(messages.get(2).contains("Property maxWait "), messages.toString());
+                    assertTrue(messages.get(0).startsWith("Name = jdbc/test Property maxActive "), messages.toString());
+                    assertTrue(messages.get(1).startsWith("Name = jdbc/test Property removeAbandoned "), messages.toString());
+                    assertTrue(messages.get(2).startsWith("Name = jdbc/test Property maxWait "), messages.toString());
                 }
                 if (infoCount != 0) {
                     assertEquals("Name = jdbc/test Ignoring unknown property: \"passwd\"", messages.get(3));
