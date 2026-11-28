@@ -244,8 +244,6 @@
     <japicmp.skip>false</japicmp.skip>
     <spotbugs.skip>false</spotbugs.skip>
     <findbugs.skip>true</findbugs.skip>
-    <!-- spdx 0.6.0 can require Java 11 depending on undocumented behavior which kicks in for us here. -->
-    <commons.spdx.version>0.5.5</commons.spdx.version>
     <surefire.argline></surefire.argline>
     <skipITs>false</skipITs>
     <dbcp.docker.postgresql.image>postgres:18.7-bookworm</dbcp.docker.postgresql.image>
